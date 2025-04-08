@@ -1,0 +1,18 @@
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 330px;
+}
+.inputContainer span {
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #f3f4f6;
+}
+.inputContainer input {
+    padding: 8px 12px;
+    outline: none;
+    font-size: 14px;
+}

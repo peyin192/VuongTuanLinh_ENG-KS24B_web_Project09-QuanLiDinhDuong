@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="/css/recipes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2><img src="/image/logo.png" class="logo"></h2>
+        <ul>
+            <li><b>YOUR DASHBOARD</b></li>
+            <li><a href="/html/product/Home-page.html"><i class="fa-solid fa-house"></i> Home Page</a></li>
+            <li><a href="/html/product/foods.html"><i class="fa-solid fa-apple-whole"></i> Foods</a></li>
+            <li><a href="#"><i class="fa-solid fa-clipboard-list"></i> Recipes</a></li>
+            <hr><br>
+            <li><a href="/html/user/signin.html"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content main">
+        <div class="content1">
+            <h2 id="list"><i class="fa-solid fa-list"></i></h2>
+            <hr>
+            <div class="content2">
+            <p id="maintext">Recipes</p>
+            <p id="undertext">Create, check and update Recipes</p>
+    </div>
+    </div>
+    <div class="container"> 
+        <main class="main-content">
+            <div class="content">
+                <div class="nd-text">
+                    <div class="text">
+                        <span>Recipes</span>
+                        <p style="font-size: 10px; padding-top: 10px;">Search, check and create new recipes</p>
+                        
+                        <br>
+                    </div>
+                    <!-- <div>
+                        <i class="fa-solid fa-plus"></i>
+                    </div> -->
+                </div>
+                <!-- Search -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search user by name" onkeyup="searchRecipes()">
+                <button onclick="searchRecipes()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <input type="text" placeholder="Sort by nutrient"> -->
+                <select name="sortByNutrients" id="sortByNutrients">
+                    <option value="sortByNutrients">Sort by nutrients</option>
+                    <option value="Energy">Energy</option>
+                    <option value="kcal">Kcal</option>
+                    <option value="fat">Fat</option>
+                    <option value="Carbs">Carbs</option>
+                    <option value="Protein">Protein</option>
+                </select>
+                
+                <button onclick="sortByNutrient()"><i class="fa-solid fa-arrow-up-short-wide"></i></button>
+                <input type="text" placeholder="Category" id="categoryInput" onkeyup="searchByCategory()">
+                <span class="arrow"><i class="fa-solid fa-arrow-down"></i></span>
+            </div>
+            <div class="check">
+            <div class="favourite">
+                <i class="fa-solid fa-heart" style="color: red;"></i>
+                <span>Favourite</span>
+                <span id="count">0</span>
+            </div>
+            <div class="my-recipes">
+                <input type="checkbox">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>My recipes</span>
+            </div>
+        </div>
+
+                <div id="recipe-grid">
+                    </div>
+
+                <div class="pagination" id="pagination">
+                  </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/Homepage.js"></script>
+</body>
+
+</html>

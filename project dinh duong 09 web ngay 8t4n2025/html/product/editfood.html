@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food information
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/editfood.css">
+    <style>
+        .input-container {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #DDDDDD;
+            padding: 0;
+            margin-bottom: 8px;
+        }
+
+        .input-container span {
+            color: #555;
+            white-space: nowrap;
+            padding: 0 6px;
+            font-size: 14px;
+            min-width: 90px;
+        }
+
+        .input-container input {
+            border: none;
+            outline: none;
+            flex: 1;
+            height: 100%;
+            background-color: white;
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        .input-container input::placeholder {
+            color: #aaa;
+        }
+
+        .input-container span:last-child {
+            text-align: center;
+            min-width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .is-invalid {
+        border: 1px solid red;
+        background-color: #ffe6e6;
+    }
+    </style>
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+    <div class="container form-container">
+        <h2 class="text-center text-dark">Food information</h2>
+        <p class="text-center text-muted">Check and update the information about the food</p>
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Name" id="name">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Source" id="source">
+            </div>
+        </div>
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-6">
+                <select class="form-select">
+                    <option>Select the food group</option>
+                </select>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <input type="number" class="form-control" placeholder="Quantity" value="100" id="quantity"> 
+                <span class="ms-2">grams</span>
+            </div>
+        </div>
+
+        <div class="nutritional-header mb-3">Nutritional value per 100 g</div>
+
+        <h5 class="section-title">Macronutrients</h5>
+        <div class="row g-2 mb-3">
+            <div class="col-md-6">
+                <div class="input-container">
+                    <span>Energy</span>
+                    <input type="number" placeholder="" id="energy">
+                    <span>kcal</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-container">
+                    <span>Fat</span>
+                    <input type="number" placeholder="" id="fat">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-container">
+                    <span>Carbohydrate</span>
+                    <input type="number" placeholder="" id="carbohydrate">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-container">
+                    <span>Protein</span>
+                    <input type="number" placeholder="" id="protein">
+                    <span>g</span>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="section-title">Micronutrients</h5>
+        <div class="row g-2 mb-3">
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Cholesterol</span>
+                    <input type="number" placeholder="" id="cholesterol">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Fiber</span>
+                    <input type="number" placeholder=""     id="fiber">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Sodium</span>
+                    <input type="number" placeholder="" id="sodium">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Water</span>
+                    <input type="number" placeholder="" id="water">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin A</span>
+                    <input type="number" placeholder="" id="vitaminA">
+                    <span>µg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin B-6</span>
+                    <input type="number" placeholder="" id="vitaminB6">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin B-12</span>
+                    <input type="number" placeholder="" id="vitaminB12">
+                    <span>µg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin C</span>
+                    <input type="number" placeholder="" id="vitaminC">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin D (D2 + D3)</span>
+                    <input type="number" placeholder="" id="vitaminD">
+                    <span>µg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin E</span>
+                    <input type="number" placeholder="" id="vitaminE">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Vitamin K</span>
+                    <input type="number" placeholder="" id="vitaminK">
+                    <span>µg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Starch</span>
+                    <input type="number" placeholder="" id="starch">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Lactose</span>
+                    <input type="number" placeholder="" id="lactose">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Alcohol</span>
+                    <input type="number" placeholder="" id="alcohol">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Caffeine</span>
+                    <input type="number" placeholder="" id="caffeine">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Sugars</span>
+                    <input type="number" placeholder="" id="sugars">
+                    <span>g</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Calcium</span>
+                    <input type="number" placeholder="" id="calcium">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Iron</span> 
+                    <input type="number" placeholder="" id="iron">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Magnesium</span>
+                    <input type="number" placeholder="" id="magnesium">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Phosphorus</span>
+                    <input type="number" placeholder="" id="phosphorus">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Potassium</span>
+                    <input type="number" placeholder="" id="potassium">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Zinc</span>
+                    <input type="number" placeholder="" id="zinc">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Copper</span>
+                    <input type="number" placeholder="" id="copper">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Fluoride</span>
+                    <input type="number" placeholder="" id="fluoride">
+                    <span>µg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Manganese</span>
+                    <input type="number" placeholder=""     id="manganese">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Selenium</span>
+                    <input type="number" placeholder="" id="selenium">
+                    <span>µg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Thiamin</span>
+                    <input type="number" placeholder="" id="thiamin">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Riboflavin</span>
+                    <input type="number" placeholder="" id="riboflavin">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Niacin</span>
+                    <input type="number" placeholder="" id="niacin">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Pantothenic acid</span>
+                    <input type="number" placeholder="" id="pantothenicAcid">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Folate, total</span>
+                    <input type="number" placeholder="" id="folate">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Folic acid</span>
+                    <input type="number" placeholder="" id="folicAcid">
+                    <span>mg</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-container">
+                    <span>Fatty acids, total saturated</span>
+                    <input type="number" placeholder="" id="saturatedFat">
+                    <span>mg</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end mt-3">
+            <a class="btn btn-secondary me-2" href="/html/product/foods.html">Cancel</a>
+            <button class="btn btn-success save-button saveBtn save-close-button">Save and Close</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/editfood.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const saveCloseBtn = document.querySelector('.save-close-button');
+      
+          if (saveCloseBtn) {
+            saveCloseBtn.addEventListener('click', function() {
+              window.location.href = 'foods.html';
+            });
+          }
+        });
+      </script>
+</body>
+</html>

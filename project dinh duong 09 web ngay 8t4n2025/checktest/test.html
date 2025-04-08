@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Field</title>
+    <style>
+        .input-container {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            width: 300px;
+            border: 1px solid #ccc; 
+        }
+
+        .input-container span {
+            color: #888;
+            white-space: nowrap;width: 50px;height: 20px;
+            padding-left: 8px;
+            padding-right: 6px;
+        }
+
+        .input-container input {
+            border: none;
+            outline: none;
+            flex: 1;
+            background-color: white;
+            height: 20px;
+            border: 1px ;
+        }
+    </style>
+</head>
+<body>
+
+<div class="input-container">
+    <span for="name">Name</span>
+    <input type="text" id="name" placeholder="">
+    <span id="unit" style="font-weight: 100; color: black;">grams</span>
+</div>
+
+</body>
+</html>
